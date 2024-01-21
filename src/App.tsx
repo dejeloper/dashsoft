@@ -3,7 +3,11 @@ import "./App.css";
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline font-inter">Hello world!</h1>
+      {/* Sidebar */}
+      <div className="fixed left-0 top-0 w-64 h-full bg-gray-900 text-white">
+        hola hola
+      </div>
+      {/* Fin Sidebar */}
     </>
   );
 }
