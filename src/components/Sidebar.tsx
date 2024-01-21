@@ -1,3 +1,4 @@
+import { useSidebarToggle } from "../hooks";
 import {
   RiHome2Line,
   RiInstanceLine,
@@ -7,24 +8,7 @@ import {
 } from "react-icons/ri";
 
 export function Sidebar() {
-  document.querySelectorAll(".sidebar-dropdown-toggle").forEach((item) => {
-    item.addEventListener("click", (e) => {
-      e.preventDefault();
-      console.log(item);
-      const parent = item.closest(".group");
-      if (parent?.classList.contains("selected")) {
-        parent?.classList.remove("selected");
-      } else {
-        document
-          .querySelectorAll(".sidebar-dropdown-toggle")
-          .forEach((item) => {
-            item.closest(".group")?.classList.remove("selected");
-          });
-
-        parent?.classList.add("selected");
-      }
-    });
-  });
+  useSidebarToggle();
 
   return (
     <div className="fixed left-0 top-0 w-64 h-full bg-gray-900 p-4">
