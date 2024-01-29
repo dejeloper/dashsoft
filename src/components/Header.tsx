@@ -5,7 +5,7 @@ export function Header() {
   return (
     <>
       <div className="flex items-center bg-white py-2 px-6 shadow-md shadow-black/5">
-        <button className="text-lg text-gray-600">
+        <button className="text-lg text-gray-600 sidebar-toggle">
           <RiMenuFill />
         </button>
         <ul className="flex items-center text-sm ml-4">
