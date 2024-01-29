@@ -1,9 +1,16 @@
 import { useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
 // Components
 import { Sidebar } from "./components/Sidebar";
 import { Header } from "./components/Header";
+// Icons
+import { RiMoreFill } from "react-icons/ri";
 // Styles
 import "./App.css";
+
+const Home = () => <div>Home</div>;
+const Searching = () => <div>Searching</div>;
+const Products = () => <div>Products</div>;
 
 function App() {
   useEffect(() => {
@@ -46,8 +53,32 @@ function App() {
   return (
     <>
       <Sidebar />
-      <main className="w-[calc(100%-256px)] ml-64 bg-gray-50 min-h-screen">
+      <main className="w-full md:w-[calc(100%-256px)] md:ml-64 bg-gray-50 min-h-screen transition-all main ">
         <Header />
+        <section className="p-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="col-span-6 bg-white rounded-md border border-gray-100 p-6 shadow-md shadow-black/10">
+              <div className="flex items-start justify-between mb-4">
+                <div className="font-medium">
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/search" element={<Searching />} />
+                    <Route path="/products" element={<Products />} />
+                    <Route path="/products" element={<Products />} /> f
+                  </Routes>
+                </div>
+                <div className="actions">
+                  <button
+                    type="button"
+                    className="dropdown-toggle text-gray-400 hover:text-gray-600"
+                  >
+                    <RiMoreFill />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </>
   );
