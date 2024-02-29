@@ -12,7 +12,7 @@ export function Sidebar() {
 
   return (
     <>
-      <div className="fixed left-0 top-0 w-64 h-full bg-gray-900 p-4 z-50 sidebar-menu transition-transform">
+      <div className="fixed left-0 top-0 w-64 h-full bg-gray-900 p-4 z-50 sidebar-menu transition-transform -translate-x-full">
         <a
           href="#"
           className="flex items-center pb-4 border-b border-b-gray-800"
@@ -101,7 +101,7 @@ export function Sidebar() {
           </li>
         </ul>
       </div>
-      <div className="fixed top-0 left-0 h-full w-full bg-black/50 z-40 sidebar-overlay md:hidden"></div>
+      <div className="fixed top-0 left-0 h-full w-full bg-black/50 z-40 sidebar-overlay md:hidden hidden"></div>
     </>
   );
 }
