@@ -12,19 +12,19 @@ export function Header() {
           <li className="mr-2">
             <a
               href="#"
-              className="text-gray-400 hover:text-gray-600 font-medium"
+              className="text-gray-400 hover:text-gray-600 font-medium hidden sm:block"
             >
               Dashboard
             </a>
           </li>
-          <li className="text-gray-600 mr-2 font-medium"> / </li>
+          <li className="text-gray-600 mr-2 font-medium hidden sm:block">/</li>
           <li className="text-gray-600 mr-2 font-medium">Analitytics</li>
         </ul>
         <ul className="ml-auto flex items-center">
-          <li className="mr-1 dropdown flex items-center">
+          <li className="mr-1 dropdown hidden xs:flex xs:items-center">
             <HeaderSearch />
           </li>
-          <li className="mr-1 dropdown flex items-center">
+          <li className="mr-1 dropdown hidden xs:flex xs:items-center">
             <HeaderNotification />
           </li>
           <li className="ml-2 dropdown flex items-center">

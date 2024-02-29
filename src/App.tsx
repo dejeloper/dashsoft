@@ -65,7 +65,6 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/search" element={<Searching />} />
                     <Route path="/products" element={<Products />} />
-                    <Route path="/products" element={<Products />} />
                     <Route path="/contact" element={<Contact />} />
                   </Routes>
                 </div>
