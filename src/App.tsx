@@ -11,6 +11,7 @@ import "./App.css";
 const Home = () => <div>Home</div>;
 const Searching = () => <div>Searching</div>;
 const Products = () => <div>Products</div>;
+const Contact = () => <div>Contact</div>;
 
 function App() {
   useEffect(() => {
@@ -64,7 +65,8 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/search" element={<Searching />} />
                     <Route path="/products" element={<Products />} />
-                    <Route path="/products" element={<Products />} /> f
+                    <Route path="/products" element={<Products />} />
+                    <Route path="/contact" element={<Contact />} />
                   </Routes>
                 </div>
                 <div className="actions">
